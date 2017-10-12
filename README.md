@@ -11,31 +11,31 @@
 
 ## Overview
 
-This is a boilerplate application for building Promised-based REST APIs in Node.js using ES6 w/Express, Mongoose, and Swagger with Code Coverage and JWT Authentication. Following best practices help Developers to remain productive. This application levereages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
+This is a boilerplate application for building Promised-based REST APIs in Node.js using ES6 w/Express, Mongoose, and Swagger with Code Coverage and JWT Authentication. Following best practices help Developers to remain productive. This application leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 
 This application's tooling was inspired by the [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library) online tutorial.
 
-### Intended Features will inlclude:
+### Intended Tooling inlclude:
 
-| Feature                                | Summary                                                                                                                                                                                                                                                     |
+| Tooling                                | Summary                                                                                                                                                                                                                                                     |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ES6 via Babel                  	 	 | ES6 support using [Babel](https://babeljs.io/).  |
-| Authentication via JsonWebToken                  	 	 | Supports authentication using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).  |
-| Code Linting               			 | JavaScript code linting is done using [ESLint](http://eslint.org) - a pluggable linter tool for identifying and reporting on patterns in JavaScript. Uses ESLint with [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), which tries to follow the Airbnb JavaScript style guide.                                                                                                |
-| Auto server restart                  	 | Restart the server using [nodemon](https://github.com/remy/nodemon) in real-time anytime an edit is made, with babel compilation and eslint.                                                                                                                                                                            |
-| ES6 Code Coverage via [istanbul](https://www.npmjs.com/package/istanbul)                  | Supports code coverage of ES6 code using istanbul and mocha. Code coverage reports are saved in `coverage/` directory post `yarn test` execution. Open `coverage/lcov-report/index.html` to view coverage report. `yarn test` also displays code coverage summary on console. Code coverage can also be enforced overall and per file as well, configured via .istanbul.yml                                                                                                                                                                            |
-| Debugging via [debug](https://www.npmjs.com/package/debug)           | Instead of inserting and deleting console.log you can replace it with the debug function and just leave it there. You can then selectively debug portions of the code by setting DEBUG env variable. If the DEBUG env variable is not set, nothing will be displayed to the console.                       |
-| Promisified Code via [bluebird](https://github.com/petkaantonov/bluebird)           | All if the code is promisified, including the tests via [supertest-as-promised](https://www.npmjs.com/package/supertest-as-promised).                       |
-| API parameter validation via [express-validation](https://www.npmjs.com/package/express-validation)           | Validate body, params, query, headers and cookies of a request (via middleware) and return a response with errors; if any of the configured validation rules fail. You won't anymore need to make your route handler dirty with such validations. |
-| Pre-commit hooks           | Before commits occurs locally, a lint and tests are run, thus ensuring tested and quality code is being committed. |
-| Secure app via [helmet](https://github.com/helmetjs/helmet)           | Helmet helps to secure Express apps by setting various and appropriate HTTP headers. |
-| Levereages [yarn](https://yarnpkg.com) over npm            |  Yarn Package Manager is released by the Facebook team. You can read more about it [here](https://code.facebook.com/posts/1840075619545360) |
+| Authentication via JsonWebToken        | Supports authentication using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).  |
+| Code Linting               			 | JavaScript code linting is done using [ESLint](http://eslint.org) - a pluggable linter tool for identifying and reporting on patterns in JavaScript. Uses ESLint with [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), which tries to follow the Airbnb JavaScript style guide. |
+| Auto server restart                  	 | Restart the server using [Nodemon](https://github.com/remy/nodemon) in real-time anytime an edit is made, with Babel compilation and ESLint. |
+| ES6 Code Coverage via [Istanbul](https://www.npmjs.com/package/istanbul)   | Supports code coverage of ES6 code using Istanbul and Mocha. Code coverage reports are saved in `coverage/` directory post `yarn test` execution. Open `coverage/lcov-report/index.html` to view coverage report. `yarn test` also displays code coverage summary on console. Code coverage can also be enforced overall and per file as well, configured via .istanbul.yml |
+| Debugging via [Debug](https://www.npmjs.com/package/debug)                 | Instead of inserting and deleting console.log you can replace it with the debug function and just leave it there. You can then selectively debug portions of the code by setting DEBUG env variable. If the DEBUG env variable is not set, nothing will be displayed to the console. |
+| Promisified Code via [Bluebird](https://github.com/petkaantonov/bluebird)  | All if the code is promisified, including the tests via [supertest-as-promised](https://www.npmjs.com/package/supertest-as-promised). |
+| API Parameter Validation via [express-validation](https://www.npmjs.com/package/express-validation)           | Validate body, params, query, headers and cookies of a request (via middleware) and return a response with errors; if any of the configured validation rules fail. You won't anymore need to make your route handler dirty with such validations. |
+| Pre-commit hooks                       | Before commits occurs locally, a lint and tests are run, thus ensuring tested and quality code is being committed. |
+| Secure app via [Helmet](https://github.com/helmetjs/helmet)                | Helmet helps to secure Express apps by setting various and appropriate HTTP headers. |
+| [Yarn](https://yarnpkg.com) over NPM   |  Yarn Package Manager is released by the Facebook team. You can read more about it [here](https://code.facebook.com/posts/1840075619545360) |
 
 - CORS support via [cors](https://github.com/expressjs/cors)
-- Leverages [http-status](https://www.npmjs.com/package/http-status) to set http status code. It is recommended to use `httpStatus.INTERNAL_SERVER_ERROR` instead of directly using `500` when setting status code.
+- Leverages [http-status](https://www.npmjs.com/package/http-status) to set http status code. It is recommended to use `httpStatus.INTERNAL_SERVER_ERROR` rather than `500` when setting status code.
 - Impliments `.editorconfig` allowing developers to define and maintain consistent coding styles between different editors and IDEs.
 
-## Getting Started
+## To Get Started:
 
 Clone the repo:
 ```sh
@@ -63,25 +63,25 @@ Start server:
 # Start server
 yarn start
 
-# Selectively set DEBUG env var to get logs
+# Selectively set the DEBUG .env var to activate logging
 DEBUG=rest-api:* yarn start
 ```
 Refer to [debug](https://www.npmjs.com/package/debug) for information about selectively turnning on logs.
 
-#TODO:
-Add Impliment Testing info
+##TODO:
+Add Testing details
 
-#TODO:
-Add Deployment info
+##TODO:
+Add Deployment details
 
-#TODO:
-Add Impliment Logging info
+##TODO:
+Add Logging details
 
-#TODO:
-Add Impliment Docker info
+##TODO:
+Add Docker details
 
 ## License
 This project is licensed under the [MIT License](https://github.com/carl-utter/rest-api.git/LICENSE)
 
-#TODO:
+##TODO:
 Add Support info
