@@ -24,7 +24,7 @@ services:
 
     # Overwrite any env var defined in .env file (if required)
     environment:
-      - MONGO_HOST=mongodb://mongo/rest-api-dev
+      - MONGO_HOST=mongodb://mongo/rest-api-development
       - DEBUG=rest-api:*
 
     # Link to containers in another service.
