@@ -13,11 +13,11 @@
 
 This is a boilerplate application for building Promised-based REST APIs in Node.js using ES6 w/Express, Mongoose, and Swagger with Code Coverage and JWT Authentication. Following best practices help Developers to remain productive. This application leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 
-This application's tooling was inspired by the [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library) online tutorial.
+Tooling inspired by: [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library)
 
-### Intended Tooling inlclude:
+### Features and Tooling:
 
-| Features and Tooling                   | Details                                                                                                                                                                                                                                                     |
+| Features                               | Details                                                                                                                                                                                                                                                     |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ES6 via Babel                  	 	 | ES6 support using [Babel](https://babeljs.io/).  |
 | Authentication via JsonWebToken        | Supports authentication using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).  |
@@ -66,7 +66,7 @@ yarn start
 # Selectively set the DEBUG .env var to activate logging
 DEBUG=rest-api:* yarn start
 ```
-Refer to [debug](https://www.npmjs.com/package/debug) for information about selectively turnning on logs.
+NOTE: Refer to [debug](https://www.npmjs.com/package/debug) for information about selectively turnning on logs.
 
 ##TODO:
 Add Testing details
