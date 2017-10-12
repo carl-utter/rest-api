@@ -1,5 +1,5 @@
 # WARNING: CURRENTLY IN DEVELOPMENT - DO NOT USE
-#A promises-based REST API Boilerplate in ES6 (w/ Code Coverage) using Node, Express, Swagger, Mongoose, and MongoDB
+#A promises-based REST API Boilerplate in ES6 (w/ Code Coverage) using Node, Express, Swagger, & Mongoose
 
 [![Coverage Status](https://coveralls.io/repos/github/carl-utter/rest-api/badge.svg?branch=master)](https://coveralls.io/github/carl-utter/rest-api?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f52b46f20ea5e897f916/maintainability)](https://codeclimate.com/github/carl-utter/rest-api/maintainability)
@@ -11,7 +11,7 @@
 
 ## Overview
 
-This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, Mongoose, and MongoDB. Includes tooling for Continous Integration, Linting, Testing, Code Coverage, and JWT Authentication because following best practices helps Developers to remain productive.
+This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, & Mongoose. Includes tooling for Continous Integration, Linting, Testing, Code Coverage, and JWT Authentication because following best practices helps Developers to remain productive.
 
 
 ### Features and Tooling:
@@ -56,7 +56,7 @@ yarn
 
 Set environment (vars):
 ```sh
-cp .env.template .env
+cp .env.default .env
 ```
 
 Start server:
