@@ -13,7 +13,7 @@
 
 This is a boilerplate application for building Promised-based REST APIs in Node.js using ES6 w/Express, Mongoose, and Swagger with Code Coverage and JWT Authentication. Following best practices help Developers to remain productive. This application levereages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 
-It is heavily inspired by the [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library) online tutorial.
+This application's tooling was inspired by the [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library) online tutorial.
 
 ### Intended Features will inlclude:
 
