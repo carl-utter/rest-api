@@ -17,7 +17,7 @@ This application's tooling was inspired by the [Egghead.io - How to Write an Ope
 
 ### Intended Tooling inlclude:
 
-| Tooling                                | Summary                                                                                                                                                                                                                                                     |
+| Features and Tooling                   | Details                                                                                                                                                                                                                                                     |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ES6 via Babel                  	 	 | ES6 support using [Babel](https://babeljs.io/).  |
 | Authentication via JsonWebToken        | Supports authentication using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).  |
