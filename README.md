@@ -11,7 +11,7 @@
 
 ## Overview
 
-This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, Mongoose, and MongoDB. Includes Linting, Testing, Code Coverage, and JWT Authentication. Following best practices help Developers to remain productive. This application leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
+This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, Mongoose, and MongoDB. Includes Linting, Testing, Code Coverage, and JWT Authentication because following best practices help Developers to remain productive.
 
 
 ### Features and Tooling:
@@ -33,6 +33,7 @@ This is a boilerplate application for building promised-based REST APIs in Node.
 - CORS support via [cors](https://github.com/expressjs/cors)
 - Leverages [http-status](https://www.npmjs.com/package/http-status) to set http status code. It is recommended to use `httpStatus.INTERNAL_SERVER_ERROR` rather than `500` when setting status code.
 - Impliments `.editorconfig` allowing developers to define and maintain consistent coding styles between different editors and IDEs.
+- Leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 - Tooling inspired by: [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library)
 
 ## To Get Started:
