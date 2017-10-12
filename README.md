@@ -1,5 +1,5 @@
-# IN DEVELOPMENT - DO NOT USE OR FORK
-#An Express, Mongoose, & Promises-based REST API Boilerplate in ES6 with Code Coverage [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# WARNING: CURRENTLY IN DEVELOPMENT - DO NOT USE
+#A promises-based REST API Boilerplate in ES6 (w/ Code Coverage) using Node, Express, Swagger, Mongoose, and MongoDB
 
 [![Coverage Status](https://coveralls.io/repos/github/carl-utter/rest-api/badge.svg?branch=master)](https://coveralls.io/github/carl-utter/rest-api?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f52b46f20ea5e897f916/maintainability)](https://codeclimate.com/github/carl-utter/rest-api/maintainability)
@@ -11,7 +11,7 @@
 
 ## Overview
 
-This is a boilerplate application for building Promised-based REST APIs in Node.js using ES6 w/Express, Mongoose, and Swagger with Code Coverage and JWT Authentication. Following best practices help Developers to remain productive. This application leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
+This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, Mongoose, and MongoDB. Includes Linting, Testing, Code Coverage, and JWT Authentication. Following best practices help Developers to remain productive. This application leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 
 
 ### Features and Tooling:
