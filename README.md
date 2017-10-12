@@ -11,7 +11,7 @@
 
 ## Overview
 
-This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, Mongoose, and MongoDB. Includes Linting, Testing, Code Coverage, and JWT Authentication because following best practices help Developers to remain productive.
+This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, Mongoose, and MongoDB. Includes Linting, Testing, Code Coverage, and JWT Authentication because following best practices helps Developers to remain productive.
 
 
 ### Features and Tooling:
