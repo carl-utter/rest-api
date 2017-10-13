@@ -69,11 +69,54 @@ DEBUG=rest-api:* yarn start
 ```
 NOTE: Refer to [debug](https://www.npmjs.com/package/debug) for information about selectively turnning on logs.
 
-##TODO:
-Add Testing details
+Tests:
+```sh
+# To run tests written in ES6
+yarn test
 
-##TODO:
-Add Deployment details
+# To run tests written in ES6 along with code coverage
+yarn test:coverage
+
+# To run tests on file change
+yarn test:watch
+
+# To run tests while enforcing code coverage (configured via .istanbul.yml)
+yarn test:check-coverage
+```
+
+Lint:
+```sh
+# Lint the code with ESLint
+yarn lint
+
+# To run lint on file change
+yarn lint:watch
+```
+
+Gulp Tasks:
+```sh
+# Clear out the dist and coverage directories
+gulp clean
+
+# Default task - Clears out the dist and coverage directories (compiles using Babel).
+gulp
+```
+
+##### Deployment
+
+```sh
+# Compile to ES5
+1. yarn build
+
+# Upload dist/ to the server
+2. scp -rp dist/ user@dest:/path
+
+# Install production dependencies only
+3. yarn --production
+
+# Use a process manager to start the service(s)
+4. Example: pm2 start dist/index.js
+```
 
 ##TODO:
 Add Logging details
