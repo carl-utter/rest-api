@@ -67,7 +67,7 @@ yarn start
 # Selectively set the DEBUG .env var to activate logging
 DEBUG=rest-api:* yarn start
 ```
-NOTE: Refer to [debug](https://www.npmjs.com/package/debug) for information about selectively turnning on logs.
+NOTE: Refer to [debug](https://www.npmjs.com/package/debug) for the information about selectively turnning on logs.
 
 Tests:
 ```sh
