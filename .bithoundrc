@@ -1,0 +1,18 @@
+{
+  "critics": {
+    "lint": {
+      "engine": "eslint"
+    }
+  },
+  "ignore": [
+    "dist/**"
+  ],
+  "test": [
+    "dist/server/tests/auth.test.js",
+    "dist/server/tests/misc.test.js",
+    "dist/server/tests/user.test.js",
+    "server/tests/auth.test.js",
+    "server/tests/misc.test.js",
+    "server/tests/user.test.js"
+  ]
+}
