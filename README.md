@@ -8,7 +8,7 @@
 [![bitHound Code](https://www.bithound.io/github/carl-utter/rest-api/badges/code.svg)](https://www.bithound.io/github/carl-utter/rest-api)
 [![bitHound Overall Score](https://www.bithound.io/github/carl-utter/rest-api/badges/score.svg)](https://www.bithound.io/github/carl-utter/rest-api)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
-[![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[//]: # ([![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](http://opensource.org/licenses/MIT))
 
 ## Overview
 
