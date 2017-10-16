@@ -54,13 +54,13 @@ Install dependencies:
 yarn
 ```
 
-##### BEFOR MOVING ON...
+#### BEFOR MOVING ON...
 
 This app levereages [commitizen](https://github.com/commitizen/cz-cli) with a *Local-to-Repo Only* configuration. You need to follow the steps below (see: INSTALL AND CONFIGURE commitizen...) before this app will Lint, Test, or Build correctly. If you are a `commitizen` user with an existing *Global-to-Repo Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
 
 If you intend to use, or, are already using `commitizen` *(recommended)* then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock* file, which is read by the various tooling implimentations within this app to know which `node_modules` are installed.
 
-*INSTALL AND CONFIGURE commitizen for use (these are "one-time" steps):*
+###### TO INSTALL AND CONFIGURE commitizen for use *(these are "one-time" steps):*
 
 1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
 ```sh
@@ -113,7 +113,7 @@ yarn add commitizen -D
 ```
 
 
-*REMOVE AND NOT USE commitizen for use (these are "one-time" steps):*
+###### OR, TO REMOVE AND NOT USE commitizen *(these are "one-time" steps):*
 
 1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
 ```sh
@@ -145,7 +145,7 @@ yarn remove commitizen
   }
 ```
 
-##### OK, MOVING ON...
+#### OK, MOVING ON...
 
 Set environment (vars):
 ```sh
