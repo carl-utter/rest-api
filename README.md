@@ -92,11 +92,10 @@ yarn add commitizen -D
 ./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact --force
 ```
 
-4. Update the `package.json` file (*must have these in it - do not include comments*):
+4. Update the `package.json` file (*it must have these in it - do not include comments*):
 ```json
   ...
-  // NOTE: this app leverages `pre-commit hooks` via `husky` and as such, the commitizen script cannot be named "commit",
-  // it must instead be named something else (e.g. "cm": "git-cz") to prevent a git "commit" from occuring twice.
+  // Add the "cm": "git-cz" script from the "scripts" block (this should already be there)
   "scripts": {
     "cm": "git-cz",
     ...
@@ -105,12 +104,15 @@ yarn add commitizen -D
 *- AND -*
 ```json
 ...
+  // Add the "commitizen": "{} block into the "config" block (this should already be there)
+  // NOTE: You can add the entire "config" block if there is not one.
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   }
 ```
+*NOTE: Because this app leverages `pre-commit hooks` via `husky`, the commitizen script cannot be named "commit", it must instead be named something else (e.g. "cm": "git-cz") to prevent a double "git commit" occurance.*
 
 
 ###### OR, TO REMOVE AND NOT USE commitizen *(these are "one-time" steps):*
@@ -124,7 +126,7 @@ yarn remove cz-conventional-changelog
 yarn remove commitizen
 ```
 
-2. In the `package.json` file (*it should have these in it*):
+2. In the `package.json` file (*it should have these in it already*):
 ```json
   ...
   // Remove the "cm": "git-cz" script from the "scripts" block
@@ -136,12 +138,13 @@ yarn remove commitizen
 *- AND -*
 ```json
 ...
-  // Remove the "commitizen": "{} block from the "config" section.
-  // You can delete the entire "config" block if there is nothing else you are going to use it for.
+  // Remove the "commitizen": "{} block from the "config" block.
+  // NOTE: You can delete the entire "config" block if there is nothing else you are going to use it for.
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+    ...
   }
 ```
 
