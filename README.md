@@ -7,7 +7,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/carl-utter/rest-api/badge.svg)](https://snyk.io/test/github/carl-utter/rest-api)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f52b46f20ea5e897f916/maintainability)](https://codeclimate.com/github/carl-utter/rest-api/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f52b46f20ea5e897f916/test_coverage)](https://codeclimate.com/github/carl-utter/rest-api/test_coverage)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 
 ## Overview
@@ -277,7 +277,7 @@ Add Logging details
 Add Docker details
 
 ### License
-This project is licensed under the [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](https://github.com/carl-utter/rest-api.git/LICENSE)
+This project is licensed under the [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](https://github.com/carl-utter/rest-api/LICENSE.md)
 
 ##### TODO:
 Add Support info
