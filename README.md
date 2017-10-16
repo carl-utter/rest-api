@@ -162,16 +162,19 @@ yarn start
 ```
 
 
-#### To Debug:
+### To Debug:
 Selectively set the DEBUG .env var @ *[root]/.env.default* (or, @ *[root]/.env* if youve already made env files) to activate logging
 ```sh
-# This will turn Debug ON when you use the "yarn start" command
+# This will turn Debug ON when you use the "yarn start" command (per the package.json scripts block)
+yarn start:debug
+
+# OR, you set and start the environment directly by running this command
 DEBUG=rest-api:* yarn start
 ```
 *NOTE: Reference [debug](https://www.npmjs.com/package/debug) for more information about selectively turnning on logs.*
 
 
-#### To Run Tests:
+### To Run Tests:
 This will execute the tests located in the *[root]/server/tests* directory.
 
 ```sh
@@ -190,7 +193,7 @@ yarn test:check-coverage
 *NOTE: Tests will auto-run via pre-commit hook.*
 
 
-#### To Run Lint:
+### To Run Lint:
 Linting is performed against the *[root]/.eslintrc* configuration. This file can be modified to your preference, but should follow [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 
 ```sh
@@ -203,7 +206,7 @@ yarn lint:watch
 *NOTE: Lint will be auto-run via pre-commit hook.*
 
 
-#### To Run Gulp Tasks:
+### To Run Gulp Tasks:
 Some of the `yarn` commands activate `Gulp` tasks but you can also run them directly
 
 ```sh
