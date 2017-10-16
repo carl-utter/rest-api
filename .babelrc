@@ -1,0 +1,28 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      },
+      "useBuiltIns": true,
+      "presets": ["es2015", "stage-2"]
+    }]
+  ],
+  "plugins": ["add-module-exports"],
+  "env": {
+    "staging": {
+      "presets": [["minify", {
+        "mangle": {
+          "exclude": ["ParserError", "NetworkError"]
+        }
+      }]]
+    },
+    "production": {
+      "presets": [["minify", {
+        "mangle": {
+          "exclude": ["ParserError", "NetworkError"]
+        }
+      }]]
+    }
+  }
+}
