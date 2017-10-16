@@ -36,8 +36,8 @@ This is a boilerplate application for building promised-based REST APIs in Node.
 - Leverages the [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 - Tooling inspired by: [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library)
 
-## To Get Started:
 
+## To Get Started:
 Clone the repo:
 ```sh
 git clone git@github.com:carl-utter/rest-api.git
@@ -54,13 +54,13 @@ Install dependencies:
 yarn
 ```
 
-#BEFOR MOVING ON...
+#####BEFOR MOVING ON...
 
-This app levereages [`commitizen`](https://github.com/commitizen/cz-cli) with a *Local to Repository Only* configuration. You need to follow the "TO SETUP AND USE commitizen" steps below before this app will Lint, Test, or Build correctly. If you are a commitizen user with a *Global Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
+This app levereages [commitizen](https://github.com/commitizen/cz-cli) with a *Local-to-Repo Only* configuration. You need to follow the steps below (see: INSTALL AND CONFIGURE commitizen...) before this app will Lint, Test, or Build correctly. If you are a `commitizen` user with an existing *Global-to-Repo Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
 
-If you intend to use, or are already using `commitizen` *(recommended)*, then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock* file, which is read by the various tooling implimentations within this app to know which `node_modules` are installed.
+If you intend to use, or, are already using `commitizen` *(recommended)* then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock* file, which is read by the various tooling implimentations within this app to know which `node_modules` are installed.
 
-*TO SETUP AND USE commitizen, take these "one-time" steps:*
+*INSTALL AND CONFIGURE commitizen for use (these are "one-time" steps):*
 
 1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
 ```sh
@@ -98,7 +98,7 @@ yarn add commitizen -D
   // NOTE: this app leverages `pre-commit hooks` via `husky` and as such, the commitizen script cannot be named "commit",
   // it must instead be named something else (e.g. "cm": "git-cz") to prevent a git "commit" from occuring twice.
   "scripts": {
-    "cm": "git-cz"
+    "cm": "git-cz",
     ...
   }
 ```
@@ -113,9 +113,9 @@ yarn add commitizen -D
 ```
 
 
-*TO REMOVE AND NOT USE commitizen at all, take these "one-time" steps:*
+*REMOVE AND NOT USE commitizen for use (these are "one-time" steps):*
 
-1. Remove any existing yarn instances and dependencies:
+1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
 ```sh
 # first: run this command
 yarn remove cz-conventional-changelog
@@ -145,7 +145,7 @@ yarn remove commitizen
   }
 ```
 
-#OK, MOVING ON...
+#####OK, MOVING ON...
 
 Set environment (vars):
 ```sh
@@ -158,18 +158,18 @@ Start server:
 yarn start
 ```
 
-## To Debug:
 
-# Selectively set the DEBUG .env var to activate logging
+#### To Debug:
+Selectively set the DEBUG .env var @ *[root]/.env.default* (or, @ *[root]/.env* if youve already made env files) to activate logging
 ```sh
+# This will turn Debug ON when you use the "yarn start" command
 DEBUG=rest-api:* yarn start
 ```
-NOTE: Refer to [debug](https://www.npmjs.com/package/debug) for the information about selectively turnning on logs.
+*NOTE: Reference [debug](https://www.npmjs.com/package/debug) for more information about selectively turnning on logs.*
 
 
-## To Run Tests:
-
-*NOTE: Tests will auto-run via pre-commit hook.*
+#### To Run Tests:
+This will execute the tests located in the *[root]/server/tests* directory.
 
 ```sh
 # To run tests written in ES6
@@ -184,10 +184,11 @@ yarn test:watch
 # To run tests while enforcing code coverage (configured via .istanbul.yml)
 yarn test:check-coverage
 ```
+*NOTE: Tests will auto-run via pre-commit hook.*
 
-## To Run Lint:
 
-*NOTE: Lint will auto-run via pre-commit hook.*
+#### To Run Lint:
+Linting is performed against the *[root]/.eslintrc* configuration. This file can be modified to your preference, but should follow [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
 
 ```sh
 # Lint the code with ESLint
@@ -196,20 +197,25 @@ yarn lint
 # To run lint on file change
 yarn lint:watch
 ```
+*NOTE: Lint will be auto-run via pre-commit hook.*
 
-## To Run Gulp Tasks:
 
-*NOTE: Gulp will auto-run via pre-commit hook.*
+#### To Run Gulp Tasks:
+Some of the `yarn` commands activate `Gulp` tasks but you can also run them directly
 
 ```sh
 # Clear out the dist and coverage directories
 gulp clean
 
-# Default task - Clears out the dist and coverage directories (compiles using Babel).
+# Default task - Clears out the dist and coverage directories (compiles using Babel)
 gulp
 ```
+*NOTE: Gulp clean will be auto-run via pre-commit hook.*
 
-## Using or Bypassing Commitizen:
+
+### Using or Bypassing Commitizen:
+Requires that you have completed the *INSTALL AND CONFIGURE commitizen...* steps above.
+
 
 *Using commitizen to commit changes to a git repo:*
 ```sh
@@ -241,7 +247,8 @@ git commit -m "commit comment here"
 git push
 ```
 
-##### Deployment
+
+## Deployment:
 
 ```sh
 # Compile to ES5
@@ -253,18 +260,18 @@ git push
 # Install production dependencies only
 3. yarn --production
 
-# Use a process manager to start the service(s)
-4. Example: pm2 start dist/index.js
+# NOTE: You can use a process manager to start the service(s)
+Example: pm2 start dist/index.js
 ```
 
-##TODO:
+#####TODO:
 Add Logging details
 
-##TODO:
+#####TODO:
 Add Docker details
 
-## License
+### License
 This project is licensed under the [MIT License](https://github.com/carl-utter/rest-api.git/LICENSE)
 
-##TODO:
+#####TODO:
 Add Support info
