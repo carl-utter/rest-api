@@ -64,9 +64,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-minify": "false0.2.0",
+    "babel-minify": "0.2.0",
     "babel-plugin-add-module-exports": "0.2.1",
-    "babel-preset-env": "false1.6.0",
+    "babel-preset-env": "1.6.0",
     "babel-preset-minify": "^0.2.0",
     "babel-preset-stage-2": "^6.24.1",
     "bithound": "^1.7.0",
@@ -93,7 +93,7 @@
     "punycode": "^2.1.0",
     "run-sequence": "^2.2.0",
     "supertest": "^3.0.0",
-    "validate-commit-msg": "false2.14.0"
+    "validate-commit-msg": "2.14.0"
   },
   "license": "MIT",
   "config": {
