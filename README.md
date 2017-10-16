@@ -150,7 +150,7 @@ yarn remove commitizen
 
 #### OK, MOVING ON...
 
-Set environment (vars):
+Set environment (vars @ *[root]/.env.default* (or, @ *[root]/.env* if you've already made an env file):
 ```sh
 cp .env.default .env
 ```
@@ -163,7 +163,7 @@ yarn start
 
 
 ### To Debug:
-Selectively set the DEBUG .env var @ *[root]/.env.default* (or, @ *[root]/.env* if youve already made env files) to activate logging
+Selectively set the DEBUG environment to activate debug logging
 ```sh
 # This will turn Debug ON when you use the "yarn start" command (per the package.json scripts block)
 yarn start:debug
