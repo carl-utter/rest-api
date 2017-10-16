@@ -54,7 +54,7 @@ Install dependencies:
 yarn
 ```
 
-#####BEFOR MOVING ON...
+##### BEFOR MOVING ON...
 
 This app levereages [commitizen](https://github.com/commitizen/cz-cli) with a *Local-to-Repo Only* configuration. You need to follow the steps below (see: INSTALL AND CONFIGURE commitizen...) before this app will Lint, Test, or Build correctly. If you are a `commitizen` user with an existing *Global-to-Repo Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
 
@@ -80,7 +80,7 @@ npm uninstall cz-conventional-changelog
 npm uninstall commitizen
 ```
 
-3. Install and configure `commitizen` with a *Local to Repository Only* configuration using `yarn`:
+3. Install and Configure `commitizen` using `yarn` (a *Local-to-Repo Only* configuration):
 ```sh
 # first: run this command
 yarn add commitizen -D
@@ -145,7 +145,7 @@ yarn remove commitizen
   }
 ```
 
-#####OK, MOVING ON...
+##### OK, MOVING ON...
 
 Set environment (vars):
 ```sh
@@ -264,14 +264,14 @@ git push
 Example: pm2 start dist/index.js
 ```
 
-#####TODO:
+##### TODO:
 Add Logging details
 
-#####TODO:
+##### TODO:
 Add Docker details
 
 ### License
 This project is licensed under the [MIT License](https://github.com/carl-utter/rest-api.git/LICENSE)
 
-#####TODO:
+##### TODO:
 Add Support info
