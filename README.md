@@ -277,7 +277,7 @@ Add Logging details
 Add Docker details
 
 ### License
-This project is licensed under the [![MIT License](https://img.shields.io/npm/l/stack-overflow-copy-paste.svg?style=flat-square)](https://github.com/carl-utter/rest-api/LICENSE.md)
+This project is licensed under the [MIT License](rest-api/LICENSE.md)
 
 ##### TODO:
 Add Support info
