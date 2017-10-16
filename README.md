@@ -187,7 +187,7 @@ yarn test:coverage
 # To run tests on file change
 yarn test:watch
 
-# To run tests while enforcing code coverage (configured via .istanbul.yml)
+# To run tests while enforcing code coverage (configured @ [root]/.istanbul.yml)
 yarn test:check-coverage
 ```
 *NOTE: Tests will auto-run via pre-commit hook.*
@@ -231,7 +231,7 @@ git status
 # then: run this git command
 git add -A
 
-# then: run this yarn command (assumes your commit script is "cm": "git-cz") and follow the commit prompts
+# then: run this yarn command and follow the commit prompts (assumes your commit script is "cm": "git-cz")
 yarn cm
 
 # then: run this git command
