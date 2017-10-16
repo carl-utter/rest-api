@@ -476,7 +476,7 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-minify@false0.2.0:
+babel-minify@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/babel-minify/-/babel-minify-0.2.0.tgz#36d381fee4002d7949dd5d796e74800336057d67"
   dependencies:
@@ -881,7 +881,7 @@ babel-polyfill@^6.20.0, babel-polyfill@^6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-env@false1.6.0:
+babel-preset-env@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.6.0.tgz#2de1c782a780a0a5d605d199c957596da43c44e4"
   dependencies:
@@ -5406,7 +5406,7 @@ v8flags@^2.0.2, v8flags@^2.1.1:
   dependencies:
     user-home "^1.1.1"
 
-validate-commit-msg@false2.14.0:
+validate-commit-msg@2.14.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/validate-commit-msg/-/validate-commit-msg-2.14.0.tgz#e5383691012cbb270dcc0bc2a4effebe14890eac"
   dependencies:

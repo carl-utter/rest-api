@@ -1,5 +1,5 @@
 # take default image of node boron i.e  node 6.x
-FROM node:6.10.1
+FROM node:8.7.0
 
 MAINTAINER Carl Utter <carl.j.utter@gmail.com>
 
