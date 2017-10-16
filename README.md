@@ -54,14 +54,15 @@ Install dependencies:
 yarn
 ```
 
-**BEFOR MOVING ON:**
-This app levereages [commitizen](https://github.com/commitizen/cz-cli) with a *Local to Repository Only* configuration. You need to follow the "SETUP commitizen" steps below before this app will Lint, Test, or Build correctly. If you are a commitizen user with a *Global Configuration* in place then you will need to refactor this app to levereage your commitizen configuration.
+#BEFOR MOVING ON...
 
-If you intend to use or are already using commitizen *(recommended)*, then ensure that it has been installed using `yarn` rather than `npm` so that it's reference will be in the *yarn.lock* file, which is used by the various tooling implimentations within this app to know which node_modules are installed and referenced.
+This app levereages [`commitizen`](https://github.com/commitizen/cz-cli) with a *Local to Repository Only* configuration. You need to follow the "TO SETUP AND USE commitizen" steps below before this app will Lint, Test, or Build correctly. If you are a commitizen user with a *Global Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
 
-*TO SETUP commitizen, take these "one-time" steps:*
+If you intend to use, or are already using `commitizen` *(recommended)*, then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock* file, which is read by the various tooling implimentations within this app to know which `node_modules` are installed.
 
-1. Remove any existing yarn instances and dependencies:
+*TO SETUP AND USE commitizen, take these "one-time" steps:*
+
+1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
 ```sh
 # first: run this command
 yarn remove cz-conventional-changelog
@@ -70,7 +71,7 @@ yarn remove cz-conventional-changelog
 yarn remove commitizen
 ```
 
-2. Remove any existing npm instances and dependencies:
+2. Remove any existing `commitizen` instances and dependencies installed by `npm`:
 ```
 # first: run this command
 npm uninstall cz-conventional-changelog
@@ -79,22 +80,25 @@ npm uninstall cz-conventional-changelog
 npm uninstall commitizen
 ```
 
-3. Install and setup commitizen with a *Local to Repository Only* configuration using yarn:
+3. Install and configure `commitizen` with a *Local to Repository Only* configuration using `yarn`:
 ```sh
 # first: run this command
 yarn add commitizen -D
 
-# then: run this command
+# then: run this command (instantiate commitizen config: path)
 ./node_modules/.bin/commitizen
 
-# then: run this command (this will override any existing commitizen adapters)
+# then: run this command (this will force an override on commitizen config: adapters)
 ./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact --force
 ```
-4. Update the `package.json` file accordingly (*it should have these in it*):
+
+4. Update the `package.json` file (*must have these in it - do not include comments*):
 ```json
   ...
+  // NOTE: this app leverages `pre-commit hooks` via `husky` and as such, the commitizen script cannot be named "commit",
+  // it must instead be named something else (e.g. "cm": "git-cz") to prevent a git "commit" from occuring twice.
   "scripts": {
-    "cm": "git-cz" // this app is using `precommits` via `husky`, so this script cannot be named "commit", it must be something else (e.g. "cm": "git-cz") to prevent a git "commit" from occuring twice.
+    "cm": "git-cz"
     ...
   }
 ```
@@ -108,35 +112,6 @@ yarn add commitizen -D
   }
 ```
 
-*Using commitizen to commit changes to a git repo:*
-```sh
-# first: run this git command
-git status
-
-# then: run this git command
-git add -A
-
-# then: run this yarn command (assumes your script is "cm": "git-cz") and follow prompts for commit
-yarn cm
-
-# then: run this git command
-git push
-```
-
-*To bypass commitizen for commit changes to a git repo (just use regular git commands):*
-```sh
-# first: run this git command
-git status
-
-# then: run this git command
-git add -A
-
-# then: run this git command
-git commit -m "commit comment here"
-
-# then: run this git command
-git push
-```
 
 *TO REMOVE AND NOT USE commitizen at all, take these "one-time" steps:*
 
@@ -161,7 +136,8 @@ yarn remove commitizen
 *- AND -*
 ```json
 ...
-  // Remove the "commitizen": "{} block from the "config" section. You can delete the entire "config" block if there is nothing else you are going to use it for.
+  // Remove the "commitizen": "{} block from the "config" section.
+  // You can delete the entire "config" block if there is nothing else you are going to use it for.
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -169,7 +145,7 @@ yarn remove commitizen
   }
 ```
 
-**OK, MOVING ON:**
+#OK, MOVING ON...
 
 Set environment (vars):
 ```sh
@@ -180,11 +156,12 @@ Start server:
 ```sh
 # Start server
 yarn start
-
+```
 
 ## To Debug:
 
 # Selectively set the DEBUG .env var to activate logging
+```sh
 DEBUG=rest-api:* yarn start
 ```
 NOTE: Refer to [debug](https://www.npmjs.com/package/debug) for the information about selectively turnning on logs.
@@ -220,7 +197,7 @@ yarn lint
 yarn lint:watch
 ```
 
-## To Run Gilp Tasks:
+## To Run Gulp Tasks:
 
 *NOTE: Gulp will auto-run via pre-commit hook.*
 
@@ -230,6 +207,38 @@ gulp clean
 
 # Default task - Clears out the dist and coverage directories (compiles using Babel).
 gulp
+```
+
+## Using or Bypassing Commitizen:
+
+*Using commitizen to commit changes to a git repo:*
+```sh
+# first: run this git command
+git status
+
+# then: run this git command
+git add -A
+
+# then: run this yarn command (assumes your commit script is "cm": "git-cz") and follow the commit prompts
+yarn cm
+
+# then: run this git command
+git push
+```
+
+*To bypass commitizen for commit changes to a git repo (just use regular git commands):*
+```sh
+# first: run this git command
+git status
+
+# then: run this git command
+git add -A
+
+# then: run this git command
+git commit -m "commit comment here"
+
+# then: run this git command
+git push
 ```
 
 ##### Deployment
