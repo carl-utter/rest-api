@@ -277,7 +277,7 @@ Add Logging details
 Add Docker details
 
 ### License
-This project is licensed under the [MIT License](rest-api/LICENSE.md)
+This project is licensed under the [MIT License](https://github.com/carl-utter/rest-api/blob/master/LICENSE.md)
 
 ##### TODO:
 Add Support info
