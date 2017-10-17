@@ -1,26 +1,32 @@
-# take default image of node boron i.e  node 6.x
+# take default image of node boron i.e  node 8.x
 FROM node:8.7.0
 
 MAINTAINER Carl Utter <carl.j.utter@gmail.com>
 
-# create app directory in container
-RUN mkdir -p /app
+#  install "global" npm dependencies as non-root user: node
+NPM_CONFIG_PREFIX=/home/node/.npm-global
 
-# set /app directory as default working directory
-WORKDIR /app
+# create /home/node/app directory in container
+RUN mkdir -p /home/node/app
 
-# only copy package.json initially so that `RUN yarn` layer is recreated only
-# if there are changes in package.json
-ADD package.json yarn.lock /app/
+# set /home/node/app directory as default working directory
+WORKDIR /home/node/app
 
-# --pure-lockfile: Don’t generate a yarn.lock lockfile
+# only copy package.json once; so that the `RUN yarn` layer
+# is recreated if package.json changes exist
+ADD package.json yarn.lock /home/node/app/
+
+# --pure-lockfile: Do not generate yarn.lock lockfile
 RUN yarn --pure-lockfile
 
-# copy all file from current dir to /app in container
-COPY . /app/
+# copy all files from current dir to /home/node/app in container
+COPY . /home/node/app/
 
 # expose port 4040
 EXPOSE 4040
+
+# run as non-root user: node
+USER node
 
 # cmd to start service
 CMD [ "yarn", "start" ]

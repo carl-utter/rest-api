@@ -1,21 +1,38 @@
-version: '2'
+version: '3'
 
 services:
+
   rest-api:
+    # build from Dockerfile @ [root]
     build:
       context: .
 
     image: rest-api:latest
 
+    # Setup logging for service using default docker logging driver
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "20"
+
+    # This api will run on a network called api
+    networks:
+      - api
+
+    # Mounts the project directory on the host to /home/node/app inside the container,
+    # allowing you to modify the code without having to rebuild the image.
     volumes:
-      # Mounts the project directory on the host to /app inside the container,
-      # allowing you to modify the code without having to rebuild the image.
-      - .:/app
+      - .:/home/node/app
       # Just specify a path and let the Engine create a volume.
       # Data present in the base image at the specified mount point will be copied
       # over to the new volume upon volume initialization.
       # node_modules from this new volume will be used and not from your local dev env.
-      - /app/node_modules/
+      - /home/node/app/node_modules/
+
+    # Expose ports [HOST:CONTAINER}
+    ports:
+      - "4040:4040"
 
     # Set environment variables from this file
     env_file:
@@ -23,20 +40,56 @@ services:
 
     # Overwrite any env var defined in .env file (if required)
     environment:
-      - MONGO_HOST=mongodb://mongo/rest-api-test
+      - MONGO_HOST=mongodb://test/rest-api-app
       - DEBUG=rest-api:*
 
     # Link to containers in another service.
     # Links also express dependency between services in the same way as depends_on,
     # so they determine the order of service startup.
     links:
-      - mongo
+      - db:
 
+    # Execute commands to config test environment
     command:
       - /bin/bash
       - -c
       - yarn --pure-lockfile && yarn test
-  mongo:
-    image: "mongo:3.4.9"
+
+    # Run healthcheck every 1.5 minutes, if fails 3x in-a-row then notify docker
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4040/api/health-check"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+
+  db:
+    # build from Docker Image: mongo
+    image: 'mongo:3.4.9'
+
+    # Open mongo port
     ports:
-      - "27017:27017"
+      - '27017:27017'
+
+    # mount mongo volume
+    volumes:
+      - type: volume
+        source: mongo
+        target: /data/db
+
+    # Configure networks available on and by which :host" aliases can be used
+    # on the networks to reference the DB
+    networks:
+      api:
+        aliases:
+          - production
+          - development
+          - test
+      legacy:
+        aliases:
+        - mongo
+networks:
+  api:
+  legacy:
+
+volumes:
+  mongo:
