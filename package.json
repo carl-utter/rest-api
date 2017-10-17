@@ -1,6 +1,6 @@
 {
   "name": "rest-api",
-  "version": "1.2.1",
+  "version": "1.0.1",
   "description": "A Boilerplate application for building REST APIs using express, mongoose in ES6 with code coverage",
   "author": "Carl Utter <carl.j.utter@gmail.com>",
   "main": "index.js",
