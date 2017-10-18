@@ -14,3 +14,4 @@ script:
   - yarn test:check-coverage
 after_script:
   - yarn report-coverage
+  - bithound check git@github.com:$TRAVIS_REPO_SLUG.git
