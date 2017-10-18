@@ -1,10 +1,10 @@
-# take default image of node boron i.e  node 8.x
+# take default image of node 8.x
 FROM node:8.7.0
 
 MAINTAINER Carl Utter <carl.j.utter@gmail.com>
 
-#  install "global" npm dependencies as non-root user: node
-NPM_CONFIG_PREFIX=/home/node/.npm-global
+# install "global" npm dependencies as non-root user: node
+# NPM_CONFIG_PREFIX /home/node/.npm-global
 
 # create /home/node/app directory in container
 RUN mkdir -p /home/node/app

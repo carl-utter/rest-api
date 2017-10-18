@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
 
@@ -45,7 +45,7 @@ services:
     # Links also express dependency between services in the same way as depends_on,
     # so they determine the order of service startup.
     links:
-      - db:
+      - "db"
 
     # Run healthcheck every 1.5 minutes, if fails 3x in-a-row then notify docker
     healthcheck:
