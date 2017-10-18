@@ -12,6 +12,7 @@ git:
   depth: 3
 before_script:
   - cp .env.default .env
+  - yarn patch-package
 script:
   - yarn test:check-coverage
 after_script:
