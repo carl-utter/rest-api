@@ -11,6 +11,7 @@
     "yarn": ">=1.2.0"
   },
   "scripts": {
+    "prepare": "patch-package",
     "cm": "git-cz",
     "start": "gulp serve",
     "start:debug": "cross-env DEBUG=rest-api:* yarn start",
@@ -93,6 +94,7 @@
     "istanbul": "1.1.0-alpha.1",
     "mocha": "^4.0.1",
     "mocha-lcov-reporter": "^1.3.0",
+    "patch-package": "^3.5.1",
     "punycode": "^2.1.0",
     "run-sequence": "^2.2.0",
     "supertest": "^3.0.0",
