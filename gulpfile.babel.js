@@ -5,7 +5,6 @@ import del from 'del';
 import runSequence from 'run-sequence';
 
 const plugins = gulpLoadPlugins();
-
 const paths = {
   js: ['./**/*.js', '!dist/**', '!node_modules/**', '!coverage/**'],
   nonJs: ['./package.json', './.gitignore', './.env'],
