@@ -1,5 +1,5 @@
 # Convert text file line endings to lf
-patch-package/*.patch eol=lf
+*.patch eol=lf
 * text=auto
 *.js text
 # Denote all files that are truly binary and should not be modified.

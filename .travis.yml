@@ -6,10 +6,11 @@ node_js:
 services:
   - mongodb
 cache:
-  - bundler
+  directories:
+  - node_modules
 git:
   depth: 3
-before_script:
+before_install:
   - cp .env.default .env
 script:
   - yarn test:check-coverage
