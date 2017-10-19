@@ -99,7 +99,9 @@
   },
   "resolutions": {
     "gulp/**/minimatch": "^3.0.2",
-    "gulp/**/graceful-fs": "^4.0.0"
+    "gulp/**/graceful-fs": "^4.0.0",
+    "bithound/**/shelljs": "^0.7.8",
+    "commitizen/shelljs": "^0.7.8"
   },
   "license": "MIT",
   "config": {
