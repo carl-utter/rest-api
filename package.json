@@ -68,7 +68,6 @@
     "babel-minify": "0.2.0",
     "babel-plugin-add-module-exports": "0.2.1",
     "babel-preset-env": "1.6.0",
-    "babel-preset-minify": "^0.2.0",
     "babel-preset-stage-2": "^6.24.1",
     "bithound": "^1.7.0",
     "chai": "^4.1.2",
@@ -98,10 +97,10 @@
     "validate-commit-msg": "2.14.0"
   },
   "resolutions": {
-    "gulp/**/minimatch": "^3.0.2",
-    "gulp/**/graceful-fs": "^4.0.0",
     "bithound/**/shelljs": "^0.7.8",
-    "commitizen/shelljs": "^0.7.8"
+    "commitizen/shelljs": "^0.7.8",
+    "gulp/**/graceful-fs": "^4.0.0",
+    "gulp/**/minimatch": "^3.0.2"
   },
   "license": "MIT",
   "config": {
