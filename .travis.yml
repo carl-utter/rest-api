@@ -15,7 +15,7 @@ before_install:
   - cp .env.default .env
 script:
   - yarn test:check-coverage
-  - /bin lint-commits.sh"
+  - /bin lint-commits.sh
   - ./node_modules/.bin/commitlint --from=$TRAVIS_COMMIT
 after_script:
   - yarn report-coverage

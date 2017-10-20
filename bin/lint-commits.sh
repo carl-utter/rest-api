@@ -3,7 +3,7 @@
 set -e
 set -u
 
-if [[ $TRAVIS_PULL_REQUEST_SLUG != "" && $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]]; then
+if [[ $TRAVIS_PULL_REQUEST_SLUG != "" && $TRAVIS_PULL_REQUEST_SLUG != "$TRAVIS_REPO_SLUG" ]]; then
     # This is a Pull Request from a different slug, hence a forked repository
     git remote add "$TRAVIS_PULL_REQUEST_SLUG" "https://github.com/$TRAVIS_PULL_REQUEST_SLUG.git"
     git fetch "$TRAVIS_PULL_REQUEST_SLUG"
