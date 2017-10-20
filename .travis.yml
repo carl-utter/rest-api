@@ -11,9 +11,12 @@ cache:
 git:
   depth: 3
 before_install:
+  - git fetch --unshallow
   - cp .env.default .env
 script:
   - yarn test:check-coverage
+  - /bin lint-commits.sh"
+  - ./node_modules/.bin/commitlint --from=$TRAVIS_COMMIT
 after_script:
   - yarn report-coverage
   - bithound check git@github.com:$TRAVIS_REPO_SLUG.git
