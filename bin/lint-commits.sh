@@ -12,7 +12,7 @@ if [[ $TRAVIS_PULL_REQUEST_SLUG != "" && $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_RE
     TO="$TRAVIS_PULL_REQUEST_SLUG/$TRAVIS_PULL_REQUEST_BRANCH"
 else
     # This is a Pull Request from the same remote, no clone repository
-    TO=$TRAVIS_COMMIT
+    TO="$TRAVIS_COMMIT"
 fi
 
 # Lint all commits in the PR
