@@ -275,7 +275,7 @@ Example: pm2 start dist/index.js
 Add Logging details
 
 ##### TODO:
-Add Docker details
+Add Docker Build details
 
 ### License
 This project is licensed under the [MIT License](https://github.com/carl-utter/rest-api/blob/master/LICENSE.md)
