@@ -272,7 +272,7 @@ Example: pm2 start dist/index.js
 ```
 
 ##### TODO:
-Add Logging details
+Add Logger/Logging details
 
 ##### TODO:
 Add Docker details
