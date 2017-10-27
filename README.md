@@ -59,9 +59,9 @@ yarn
 
 This app levereages [commitizen](https://github.com/commitizen/cz-cli) and [commitlint](http://marionebl.github.io/commitlint/#/guides-local-setup) with a *Local-to-Repo Only* configuration. If you are a `commitizen` user with an existing *Global-to-Repo Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
 
-To use `commitizen` *"as-is"* fot this app, you can ignore this section and goto: [OK, MOVING ON...](https://github.com/carl-utter/rest-api#ok-moving-on). Otherwise, below are instructions to [REMOVE](https://github.com/carl-utter/rest-api#to-remove-and-not-use-commitizen-these-are-one-time-actions-to-perform) or [RE-INSTALL](https://github.com/carl-utter/rest-api#to-re-install-and-configure-commitizen-and-commitlint-for-use-these-are-one-time-actions-to-perform) `commitizen` and `commitlint` - after removal.
+To use `commitizen` *"as-is"* fot this app, you can ignore this section (goto: [OK, MOVING ON](#ok-moving-on)). Otherwise, below are instructions to [REMOVE](#to-remove-and-not-use-commitizen-these-are-one-time-actions-to-perform), and/or, [RE-INSTALL](#to-re-install-and-configure-commitizen-and-commitlint-for-use-these-are-one-time-actions-to-perform) `commitizen` and `commitlint` after removal.
 
-*NOTE: If you intend to use, or, are already using `commitizen` (recommended), then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock file.*
+*NOTE: If you intend to use, or, you are already using a version and configuration of `commitizen` that is not the one included in this app, then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock file.*
 
 
 ###### TO REMOVE AND NOT USE commitizen *(these are "one-time" actions to perform):*
