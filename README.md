@@ -77,7 +77,7 @@ yarn remove commitizen
 
 2. In the `package.json` file:
 ```json
-  "..."
+  ...
   // Remove the "cm": "git-cz" script from the "scripts" block (i.e. husky git hook)
   "scripts": {
     "cm": "git-cz"
@@ -86,8 +86,8 @@ yarn remove commitizen
 ```
 *- AND -*
 ```json
-"..."
-  // Remove the "commitizen": {...} and "commitlint": {...} blocks from the "config" block.
+...
+  // Remove the "commitizen": {"..."} and "commitlint": {"..."} blocks from the "config" block.
   // NOTE: You can delete the entire "config" block if there is nothing else you are going to use it for.
   "config": {
     "commitizen": {
@@ -95,8 +95,10 @@ yarn remove commitizen
     },
     "commitlint": {
       "extends": "@commitlint/config-angular"
+    },
+    {
+      "..."
     }
-    "..."
   }
 ```
 
@@ -134,7 +136,7 @@ yarn add @commitlint/{cli,config-angular} -D
 
 4. Update the `package.json` file (*it must have these in it - do not include comments*):
 ```json
-  "..."
+  ...
   // Add the "cm": "git-cz" script from the "scripts" block (i.e. husky git hook)
   "scripts": {
     "cm": "git-cz",
@@ -143,7 +145,7 @@ yarn add @commitlint/{cli,config-angular} -D
 ```
 *- AND -*
 ```json
-"..."
+...
   // Add the "commitizen": {"..."} and "commitlint": {"..."} blocks into the "config" block
   // NOTE: You can add the entire "config" block if one does not already exist.
   "config": {
@@ -152,8 +154,10 @@ yarn add @commitlint/{cli,config-angular} -D
     },
     "commitlint": {
       "extends": "@commitlint/config-angular"
+    },
+    {
+      "..."
     }
-    "..."
   }
 ```
 *NOTE: Because this app leverages `pre-commit hooks` via `husky`, the commitizen script cannot be named "commit", it must instead be named something else (e.g. "cm": "git-cz") to prevent a double "git commit" occurance.*
