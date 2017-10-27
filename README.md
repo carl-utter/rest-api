@@ -27,7 +27,8 @@ This is a boilerplate application for building promised-based REST APIs in Node.
 | JWT Authentication                     | Supports authentication using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).  |
 | Secure app via [Helmet](https://github.com/helmetjs/helmet)                | Helmet helps to secure Express apps by setting various and appropriate HTTP headers. |
 | Auto server restart                  	 | Restart the server using [Nodemon](https://github.com/remy/nodemon) in real-time anytime an edit is made, with Babel compilation and ESLint. |
-| Pre-commit hooks                       | Before commits occurs locally, a lint and tests are run, thus ensuring tested and quality code is being committed. |
+| Consistent Commits with [Commitizen](https://github.com/commitizen/cz-cli) | When you commit with [Commitizen](https://github.com/commitizen/cz-cli), you'll be prompted to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit (this app leverages [Husky](https://github.com/typicode/husky) and [Commitlint](https://github.com/marionebl/commitlint) for that!). No more digging through the CONTRIBUTING.md to find what the preferred format is. Get instant feedback on your commit message formatting and be prompted for required fields. |
+| Pre-commit hooks via [Husky](https://github.com/typicode/husky)            | Before commits occurs locally, a lint and tests are run, thus ensuring tested and quality code is being committed. |
 | Code Linting               			 | JavaScript code linting is done using [ESLint](http://eslint.org) - a pluggable linter tool for identifying and reporting on patterns in JavaScript. Uses ESLint with [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), which tries to follow the Airbnb JavaScript style guide. |
 | Debugging via [Debug](https://www.npmjs.com/package/debug)                 | Instead of inserting and deleting console.log you can replace it with the debug function and just leave it there. You can then selectively debug portions of the code by setting DEBUG env variable. If the DEBUG env variable is not set, nothing will be displayed to the console. |
 
@@ -50,7 +51,7 @@ Install yarn:
 npm install -g yarn
 ```
 
-Install dependencies:
+Install app dependencies:
 ```sh
 yarn
 ```
