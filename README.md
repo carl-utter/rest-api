@@ -95,9 +95,6 @@ yarn remove commitizen
     },
     "commitlint": {
       "extends": "@commitlint/config-angular"
-    },
-    {
-      "..."
     }
   }
 ```
@@ -154,9 +151,6 @@ yarn add @commitlint/{cli,config-angular} -D
     },
     "commitlint": {
       "extends": "@commitlint/config-angular"
-    },
-    {
-      "..."
     }
   }
 ```
