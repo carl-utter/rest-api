@@ -241,7 +241,7 @@ git status
 # then: run this git command
 git add -A
 
-# then: run this yarn command and follow the commit prompts (assumes your commit script hook is "cm": "git-cz")
+# then: run this yarn command and follow commit prompts (assumes commit script hook "cm": "git-cz")
 yarn cm
 
 # then: run this git command
