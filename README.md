@@ -226,14 +226,14 @@ gulp clean
 # Default task - Clears out the dist and coverage directories (compiles using Babel)
 gulp
 ```
-*NOTE: Gulp clean will be auto-run via pre-commit hook.*
+*NOTE: Gulp clean is auto-run @ pre-commit hook.*
 
 
-### Using or Bypassing Commitizen:
-Requires that you have completed the *INSTALL AND CONFIGURE commitizen...* steps above.
+### Using or Bypassing Commitizen for commits:
+Assuming that you are using `commitizen` configured *"as-is"* in this app...
 
 
-*Using commitizen to commit changes to a git repo:*
+###### To use commitizen to commit changes to a git repo just substitue the "git commit" command):
 ```sh
 # first: run this git command
 git status
@@ -241,14 +241,14 @@ git status
 # then: run this git command
 git add -A
 
-# then: run this yarn command and follow the commit prompts (assumes your commit script is "cm": "git-cz")
+# then: run this yarn command and follow the commit prompts (assumes your commit script hook is "cm": "git-cz")
 yarn cm
 
 # then: run this git command
 git push
 ```
 
-*To bypass commitizen for commit changes to a git repo (just use regular git commands):*
+###### To bypass commitizen for commit changes to a git repo just use the "git commit" command:
 ```sh
 # first: run this git command
 git status
