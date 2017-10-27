@@ -57,80 +57,28 @@ yarn
 
 #### BEFOR MOVING ON...
 
-This app levereages [commitizen](https://github.com/commitizen/cz-cli) with a *Local-to-Repo Only* configuration. You need to follow the steps below (see: INSTALL AND CONFIGURE commitizen...) before this app will Lint, Test, or Build correctly. If you are a `commitizen` user with an existing *Global-to-Repo Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
+This app levereages [commitizen](https://github.com/commitizen/cz-cli) and [commitlint](http://marionebl.github.io/commitlint/#/guides-local-setup) with a *Local-to-Repo Only* configuration. If you are a `commitizen` user with an existing *Global-to-Repo Configuration* in place then you will need to refactor this app to levereage your `commitizen` configuration.
 
 If you intend to use, or, are already using `commitizen` *(recommended)* then ensure that it has been installed by `yarn` rather than `npm` so that it's reference(s) will be in the *yarn.lock* file, which is read by the various tooling implimentations within this app to know which `node_modules` are installed.
 
-###### TO INSTALL AND CONFIGURE commitizen for use *(these are "one-time" steps):*
+The sections below detail the instructions to REMOVE or RE_INSTALL `commitizen` and `commitlint` after removal. Or, you can just ignore these section (see: [OK, MOVING ON...](https://github.com/carl-utter/rest-api#ok-moving-on) below).
+
+
+###### TO REMOVE AND NOT USE commitizen *(these are "one-time" actions to perform - in the order indicated):*
 
 1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
 ```sh
 # first: run this command
-yarn remove cz-conventional-changelog
+yarn remove commitlint
 
 # then: run this command
 yarn remove commitizen
 ```
 
-2. Remove any existing `commitizen` instances and dependencies installed by `npm`:
-```
-# first: run this command
-npm uninstall cz-conventional-changelog
-
-# then: run this command
-npm uninstall commitizen
-```
-
-3. Install and Configure `commitizen` using `yarn` (a *Local-to-Repo Only* configuration):
-```sh
-# first: run this command
-yarn add commitizen -D
-
-# then: run this command (instantiate commitizen config: path)
-./node_modules/.bin/commitizen
-
-# then: run this command (this will force an override on commitizen config: adapters)
-./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact --force
-```
-
-4. Update the `package.json` file (*it must have these in it - do not include comments*):
+2. In the `package.json` file:
 ```json
   ...
-  // Add the "cm": "git-cz" script from the "scripts" block (this should already be there)
-  "scripts": {
-    "cm": "git-cz",
-    ...
-  }
-```
-*- AND -*
-```json
-...
-  // Add the "commitizen": "{} block into the "config" block (this should already be there)
-  // NOTE: You can add the entire "config" block if there is not one.
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
-```
-*NOTE: Because this app leverages `pre-commit hooks` via `husky`, the commitizen script cannot be named "commit", it must instead be named something else (e.g. "cm": "git-cz") to prevent a double "git commit" occurance.*
-
-
-###### OR, TO REMOVE AND NOT USE commitizen *(these are "one-time" steps):*
-
-1. Remove any existing `commitizen` instances and dependencies installed by `yarn`:
-```sh
-# first: run this command
-yarn remove cz-conventional-changelog
-
-# then: run this command
-yarn remove commitizen
-```
-
-2. In the `package.json` file (*it should have these in it already*):
-```json
-  ...
-  // Remove the "cm": "git-cz" script from the "scripts" block
+  // Remove the "cm": "git-cz" script from the "scripts" block (i.e. husky git hook)
   "scripts": {
     "cm": "git-cz"
     ...
@@ -139,15 +87,76 @@ yarn remove commitizen
 *- AND -*
 ```json
 ...
-  // Remove the "commitizen": "{} block from the "config" block.
+  // Remove the "commitizen": {...} and "commitlint": {...} blocks from the "config" block.
   // NOTE: You can delete the entire "config" block if there is nothing else you are going to use it for.
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/prompt"
+    },
+    "commitlint": {
+      "extends": "@commitlint/config-angular"
     }
     ...
   }
 ```
+
+###### TO RE-INSTALL AND CONFIGURE commitizen and commitlint for use *(these are "one-time" actions to perform - in the order indicated):*
+
+1. Ensure a clean install by removing any existing `commitlint` and `commitizen` instances and dependencies installed by `yarn`:
+```sh
+# first: run this command
+yarn remove commitlint
+
+# then: run this command
+yarn remove commitizen
+```
+
+2. Ensure a clean install by removing any existing `commitlint` and `commitizen` instances and dependencies installed by `npm`:
+```
+# first: run this command
+npm uninstall commitlint
+
+# then: run this command
+npm uninstall commitizen
+```
+
+3. Install and Configure `commitizen` and `commitlint` using `yarn` (a *Local-to-Repo Only* configuration):
+```sh
+# first: run this command
+yarn add commitizen -D
+
+# then: run this command (instantiate commitizen config: path)
+./node_modules/.bin/commitizen
+
+# then: run this command
+yarn add @commitlint/{cli,config-angular} -D
+```
+
+4. Update the `package.json` file (*it must have these in it - do not include comments*):
+```json
+  ...
+  // Add the "cm": "git-cz" script from the "scripts" block (i.e. husky git hook)
+  "scripts": {
+    "cm": "git-cz",
+    ...
+  }
+```
+*- AND -*
+```json
+...
+  // Add the "commitizen": {...} and "commitlint": {...} blocks into the "config" block
+  // NOTE: You can add the entire "config" block if there is not one.
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    },
+    "commitlint": {
+      "extends": "@commitlint/config-angular"
+    }
+  }
+```
+*NOTE: Because this app leverages `pre-commit hooks` via `husky`, the commitizen script cannot be named "commit", it must instead be named something else (e.g. "cm": "git-cz") to prevent a double "git commit" occurance.*
+
 
 #### OK, MOVING ON...
 
