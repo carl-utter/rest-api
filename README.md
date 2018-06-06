@@ -3,8 +3,6 @@
 
 [![Build Status](https://travis-ci.org/carl-utter/rest-api.svg?branch=master)](https://travis-ci.org/carl-utter/rest-api)
 [![Coverage Status](https://coveralls.io/repos/github/carl-utter/rest-api/badge.svg?branch=master)](https://coveralls.io/github/carl-utter/rest-api?branch=master)
-[![bitHound Overall Score](https://www.bithound.io/github/carl-utter/rest-api/badges/score.svg)](https://www.bithound.io/github/carl-utter/rest-api)
-[![bitHound Code](https://www.bithound.io/github/carl-utter/rest-api/badges/code.svg)](https://www.bithound.io/github/carl-utter/rest-api)
 [![Known Vulnerabilities](https://snyk.io/test/github/carl-utter/rest-api/badge.svg)](https://snyk.io/test/github/carl-utter/rest-api)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f52b46f20ea5e897f916/maintainability)](https://codeclimate.com/github/carl-utter/rest-api/maintainability)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
