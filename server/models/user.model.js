@@ -72,6 +72,6 @@ UserSchema.statics = {
 };
 
 /**
- * @typedef User
+ * @typedof User
  */
 export default mongoose.model('User', UserSchema);
