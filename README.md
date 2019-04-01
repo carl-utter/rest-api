@@ -11,7 +11,7 @@
 
 
 ## Overview
-This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, Swagger, & Mongoose. Includes tooling for Continous Integration, Linting, Testing, Code Coverage, and JWT Authentication because following best practices helps Developers to remain productive.
+This is a boilerplate application for building promised-based REST APIs in Node.js using ES6 w/Express, & Mongoose. Includes tooling for Continous Integration, Linting, Testing, Code Coverage, and JWT Authentication because following best practices helps Developers to remain productive.
 
 
 ### Features and Tooling:
@@ -41,7 +41,7 @@ This is a boilerplate application for building promised-based REST APIs in Node.
 ## To Get Started:
 Clone the repo:
 ```sh
-git clone git@github.com:carl-utter/rest-api.git
+git clone https://github.com/carl-utter/rest-api.git
 cd rest-api
 ```
 
@@ -279,14 +279,5 @@ git push
 Example: pm2 start dist/index.js
 ```
 
-##### TODO:
-Add Logging details
-
-##### TODO:
-Add Docker Build details
-
 ### License
 This project is licensed under the [MIT License](https://github.com/carl-utter/rest-api/blob/master/LICENSE.md)
-
-##### TODO:
-Add Support info
