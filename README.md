@@ -1,4 +1,4 @@
-# WARNING: CURRENTLY IN DEVELOPMENT - DO NOT USE
+# WARNING: NOT OFTEN UPDATED - USE AT OWN RISK
 #A promises-based REST API Boilerplate in ES6 (w/ Code Coverage) using Node, Express, Swagger, & Mongoose
 
 [![Build Status](https://travis-ci.org/carl-utter/rest-api.svg?branch=master)](https://travis-ci.org/carl-utter/rest-api)
