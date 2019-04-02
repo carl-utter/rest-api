@@ -1,5 +1,5 @@
 # WARNING: NOT OFTEN UPDATED - USE AT OWN RISK
-#A promises-based REST API Boilerplate in ES6 (w/ Code Coverage) using Node, Express, Swagger, & Mongoose
+#A promises-based REST API Boilerplate in ES6 (w/ Code Coverage) using Node, Express, & Mongoose
 
 [![Build Status](https://travis-ci.org/carl-utter/rest-api.svg?branch=master)](https://travis-ci.org/carl-utter/rest-api)
 [![Coverage Status](https://coveralls.io/repos/github/carl-utter/rest-api/badge.svg?branch=master)](https://coveralls.io/github/carl-utter/rest-api?branch=master)
@@ -168,6 +168,168 @@ Start server:
 ```sh
 # Start server
 yarn start
+
+# NOTE: The terminal output will look something similar to
+yarn run v1.15.2
+$ gulp serve
+[16:30:16] Requiring external module babel-register
+[16:30:16] Using gulpfile ~/Development/rest-api/gulpfile.babel.js
+[16:30:16] Starting 'clean'...
+[16:30:16] Finished 'clean' after 25 ms
+[16:30:16] Starting 'serve'...
+[16:30:16] Starting 'copy'...
+[16:30:17] Starting 'babel'...
+[16:30:17] Finished 'serve' after 78 ms
+[16:30:19] Finished 'copy' after 2.05 s
+[16:30:19] Finished 'babel' after 2.17 s
+[16:30:19] Starting 'nodemon'...
+[16:30:19] Finished 'nodemon' after 66 ms
+[16:30:19] [nodemon] 1.12.1
+[16:30:19] [nodemon] to restart at any time, enter `rs`
+[16:30:19] [nodemon] watching: *.*
+[16:30:19] [nodemon] starting `node dist/index.js`
+server started on port 4040 (development)
+
+```
+
+Now that the Server is running on localhost:4040; use [Postman](https://www.getpostman.com/) to send requests to the API:
+
+Add a User
+```sh
+# STEP 1: Set Request type to POST
+
+# STEP 2: Set Request URL to http://localhost:4040/api/users
+
+# STEP 3: Paste the following into the Request Body (as raw JSON)
+{
+    "username": "john doe",
+    "mobileNumber": "8005551212"
+}
+
+# STEP 4: Click: Send
+
+# RESULT: The Response Body in Postman should look similar to
+{
+    "__v": 0,
+    "username": "john doe",
+    "mobileNumber": "8005551212",
+    "_id": "5ca28e7fc6345b89d4318bc5",
+    "createdAt": "2019-04-01T22:19:43.482Z"
+}
+```
+
+For the purpose of demonstrating this API's other Request Types; add a second User
+```sh
+# STEP 1: Set Request type to POST
+
+# STEP 2: Set Request URL to http://localhost:4040/api/users
+
+# STEP 3: Paste the following into the request Body (as raw JSON)
+{
+    "username": "jane doe",
+    "mobileNumber": "8005551213"
+}
+
+# STEP 4: Click: Send
+
+# RESULT: The Response Body in Postman should look similar to
+{
+    "__v": 0,
+    "username": "jane doe",
+    "mobileNumber": "8005551213",
+    "_id": "5ca29c3c60d2cf8d0396e52d",
+    "createdAt": "2019-04-01T23:18:20.245Z"
+}
+```
+
+List all Users
+```sh
+# STEP 1: Set Request type to: GET
+
+# STEP 2: Set Request URL to: http://localhost:4040/api/users
+
+# STEP 3: Click: Send
+
+# RESULT: The Response Body in Postman should look similar to
+[
+    {
+        "_id": "5ca29c3c60d2cf8d0396e52d",
+        "username": "jane doe",
+        "mobileNumber": "8005551213",
+        "__v": 0,
+        "createdAt": "2019-04-01T23:18:20.245Z"
+    },
+    {
+        "_id": "5ca28e7fc6345b89d4318bc5",
+        "username": "john doe",
+        "mobileNumber": "8005551212",
+        "__v": 0,
+        "createdAt": "2019-04-01T22:19:43.482Z"
+    }
+]
+```
+
+List a Specific User
+```sh
+# STEP 1: Set Request Verb to GET
+
+# STEP 2: Set Request URL to http://localhost:4040/api/users/5ca28e7fc6345b89d4318bc5
+# NOTE: the _id hash used in the Request URL must match that of the specific user being listed
+
+# STEP 3: Click: Send
+
+# RESULT: The Response Body in Postman should look similar to
+{
+    "_id": "5ca28e7fc6345b89d4318bc5",
+    "username": "john doe",
+    "mobileNumber": "8005551212",
+    "__v": 0,
+    "createdAt": "2019-04-01T22:19:43.482Z"
+}
+```
+
+Update a Specific User (e.g. change last digit of mobileNumber from a 2, to a 4)
+```sh
+# STEP 1: Set Request Verb to PUT
+
+# STEP 2: Set Request URL to http://localhost:4040/api/users/5ca28e7fc6345b89d4318bc5
+# NOTE: the _id hash used in the Request URL must match that of the specific user being updated
+
+# STEP 3: Paste the following into the request Body (as raw JSON)
+{
+    "username": "john doe",
+    "mobileNumber": "8005551214"
+}
+
+# STEP 4: Click: Send
+
+# RESULT: The Response Body in Postman should look similar to
+{
+    "_id": "5ca28e7fc6345b89d4318bc5",
+    "username": "john doe",
+    "mobileNumber": "8005551214",
+    "__v": 0,
+    "createdAt": "2019-04-01T22:19:43.482Z"
+}
+```
+
+Delete a Specific User
+```sh
+# STEP 1: Set Request Verb to DELETE
+
+# STEP 2: Set Request URL to http://localhost:4040/api/users/5ca29c3c60d2cf8d0396e52d
+# NOTE: the _id hash used in the Request URL must match that of the specific user being deleted
+
+# STEP 3: Click: Send
+
+# RESULT: The Response Body in Postman should look similar to
+{
+    "_id": "5ca29c3c60d2cf8d0396e52d",
+    "username": "jane doe",
+    "mobileNumber": "8005551213",
+    "__v": 0,
+    "createdAt": "2019-04-01T23:18:20.245Z"
+}
 ```
 
 

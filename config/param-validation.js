@@ -9,7 +9,7 @@ export default {
     },
   },
 
-  // UPDATE /api/users/:userId
+  // PUT /api/users/:userId
   updateUser: {
     body: {
       username: Joi.string().required(),
