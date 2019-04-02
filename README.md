@@ -396,31 +396,31 @@ Assuming that you are using `commitizen` configured *"as-is"* in this app...
 
 ###### To use commitizen to commit changes to a git repo just substitue the "git commit" command):
 ```sh
-# first: run this git command
+# first: get file change status using this git command
 git status
 
-# then: run this git command
+# then: add all changed files (per git status) using this git command
 git add -A
 
 # then: run this yarn command and follow commit prompts (assumes commit script hook "cm": "git-cz")
 yarn cm
 
-# then: run this git command
+# finally: push the files to the repo using this git command
 git push
 ```
-
+*- OR -*
 ###### To bypass commitizen for commit changes to a git repo just use the "git commit" command:
 ```sh
-# first: run this git command
+# first: get file change status using this git command
 git status
 
-# then: run this git command
+# then: add all changed files (per git status) using this git command
 git add -A
 
-# then: run this git command
+# then: comment on file changes for commit-to-repo using this git command
 git commit -m "commit comment here"
 
-# then: run this git command
+# finally: push the files to the repo using this git command
 git push
 ```
 
