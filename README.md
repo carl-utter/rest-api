@@ -164,9 +164,9 @@ Set environment (vars @ *[root]/.env.default* (or, @ *[root]/.env* if you've alr
 cp .env.default .env
 ```
 
-Start server:
+Start Server:
 ```sh
-# Start server
+# Start server using Yarn
 yarn start
 
 # NOTE: The terminal output will look something similar to
@@ -271,7 +271,7 @@ List all Users
 
 List a Specific User
 ```sh
-# STEP 1: Set Request Verb to GET
+# STEP 1: Set Request type to GET
 
 # STEP 2: Set Request URL to http://localhost:4040/api/users/5ca28e7fc6345b89d4318bc5
 # NOTE: the _id hash used in the Request URL must match that of the specific user being listed
@@ -290,7 +290,7 @@ List a Specific User
 
 Update a Specific User (e.g. change last digit of mobileNumber from a 2, to a 4)
 ```sh
-# STEP 1: Set Request Verb to PUT
+# STEP 1: Set Request type to PUT
 
 # STEP 2: Set Request URL to http://localhost:4040/api/users/5ca28e7fc6345b89d4318bc5
 # NOTE: the _id hash used in the Request URL must match that of the specific user being updated
@@ -315,7 +315,7 @@ Update a Specific User (e.g. change last digit of mobileNumber from a 2, to a 4)
 
 Delete a Specific User
 ```sh
-# STEP 1: Set Request Verb to DELETE
+# STEP 1: Set Request type to DELETE
 
 # STEP 2: Set Request URL to http://localhost:4040/api/users/5ca29c3c60d2cf8d0396e52d
 # NOTE: the _id hash used in the Request URL must match that of the specific user being deleted
