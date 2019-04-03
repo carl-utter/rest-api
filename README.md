@@ -45,7 +45,7 @@ git clone https://github.com/carl-utter/rest-api.git
 cd rest-api
 ```
 
-Install yarn:
+Install yarn globally:
 ```js
 npm install -g yarn
 ```
