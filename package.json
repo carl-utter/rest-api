@@ -24,7 +24,8 @@
     "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
     "report-coverage": "coveralls < ./coverage/lcov.info",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -63,7 +64,7 @@
     "mongoose": "^4.12.3",
     "morgan": "^1.9.1",
     "winston": "^2.4.0",
-    "snyk": "^1.124.1"
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@commitlint/config-angular": "^4.2.1",
