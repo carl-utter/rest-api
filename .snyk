@@ -35,6 +35,30 @@ patch:
         patched: '2019-07-03T17:05:22.771Z'
     - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
         patched: '2019-07-03T17:05:22.771Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - express-validation > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - express-winston > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - mongoose > async > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-11T22:44:11.283Z'
   'npm:moment:20170905':
     - express-jwt > jsonwebtoken > joi > moment:
         patched: '2019-07-03T17:05:22.771Z'
