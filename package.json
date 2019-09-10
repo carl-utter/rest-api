@@ -63,8 +63,8 @@
     "method-override": "^2.3.5",
     "mongoose": "^4.12.3",
     "morgan": "^1.9.1",
-    "winston": "^2.4.0",
-    "snyk": "^1.226.1"
+    "snyk": "^1.226.1",
+    "winston": "^2.4.0"
   },
   "devDependencies": {
     "@commitlint/config-angular": "^4.2.1",
