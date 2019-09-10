@@ -59,6 +59,8 @@ patch:
         patched: '2019-07-11T22:44:11.283Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-07-11T22:44:11.283Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-09-10T22:04:43.849Z'
   'npm:moment:20170905':
     - express-jwt > jsonwebtoken > joi > moment:
         patched: '2019-07-03T17:05:22.771Z'
