@@ -100,12 +100,16 @@
     "supertest": "^3.0.0"
   },
   "resolutions": {
+    "commitlint/**/lodash": "^4.17.13",
     "commitizen/shelljs": "^0.7.8",
     "commitizen/**/lodash": "^4.17.13",
+    "eslint/**/lodash": "^4.17.13",
     "express-jwt/++/base64url": "^3.0.0",
+    "globule/lodash": "^4.17.13",
     "gulp/**/graceful-fs": "^4.0.0",
     "gulp/**/minimatch": "^3.0.2",
-    "jsonwebtoken/++/base64url": "^3.0.0"
+    "jsonwebtoken/++/base64url": "^3.0.0",
+    "snyk/**/lodash": "^4.17.13"
   },
   "license": "MIT",
   "config": {
