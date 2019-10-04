@@ -100,8 +100,8 @@
     "supertest": "^3.0.0"
   },
   "resolutions": {
-    "bithound/**/shelljs": "^0.7.8",
     "commitizen/shelljs": "^0.7.8",
+    "commitizen/**/lodash": "^4.17.13",
     "express-jwt/++/base64url": "^3.0.0",
     "gulp/**/graceful-fs": "^4.0.0",
     "gulp/**/minimatch": "^3.0.2",
