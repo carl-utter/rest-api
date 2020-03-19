@@ -24,7 +24,7 @@
     "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
     "report-coverage": "coveralls < ./coverage/lcov.info",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
+    "prepare": "yarn run snyk-protect",
     "prepublish": "npm run snyk-protect"
   },
   "repository": {
@@ -45,7 +45,7 @@
     "boilerplate"
   ],
   "dependencies": {
-    "bluebird": "^3.5.1",
+    "bluebird": "^3.7.2",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "cookie-parser": "1.4.3",
@@ -57,7 +57,7 @@
     "express-validation": "^1.0.2",
     "express-winston": "^2.5.0",
     "helmet": "^3.21.1",
-    "http-status": "^1.0.1",
+    "http-status": "^1.4.2",
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^2.3.5",
