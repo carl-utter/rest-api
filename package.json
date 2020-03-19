@@ -24,7 +24,7 @@
     "test:check-coverage": "yarn test:coverage && istanbul check-coverage",
     "report-coverage": "coveralls < ./coverage/lcov.info",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
+    "prepare": "yarn run snyk-protect",
     "prepublish": "npm run snyk-protect"
   },
   "repository": {
@@ -63,7 +63,7 @@
     "method-override": "^2.3.5",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
-    "snyk": "^1.258.1",
+    "snyk": "^1.258.2",
     "winston": "^2.4.0"
   },
   "devDependencies": {
