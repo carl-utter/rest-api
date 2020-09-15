@@ -12,6 +12,8 @@ before_install:
   - cp .env.default .env
 addons:
   chrome: stable
+install:
+  - yarn
 before_script:
   - yarn global add nyc
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
