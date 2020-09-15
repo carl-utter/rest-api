@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.0
+version: v1.19.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -72,3 +72,38 @@ patch:
   SNYK-JS-TREEKILL-536781:
     - snyk > snyk-sbt-plugin > tree-kill:
         patched: '2019-12-12T00:26:37.183Z'
+  SNYK-JS-LODASH-567746:
+    - snyk > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
+    - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-15T17:00:12.668Z'
