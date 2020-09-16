@@ -64,7 +64,7 @@
     "mongoose": "^5.9.12",
     "morgan": "^1.9.1",
     "snyk": "^1.319.2",
-    "winston": "^2.4.0"
+    "winston": "^2.4.5"
   },
   "devDependencies": {
     "@commitlint/config-angular": "^4.2.1",
