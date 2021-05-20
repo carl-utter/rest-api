@@ -63,7 +63,7 @@
     "method-override": "^2.3.5",
     "mongoose": "^5.10.0",
     "morgan": "^1.9.1",
-    "snyk": "^1.398.1",
+    "snyk": "^1.425.4",
     "winston": "^2.4.0"
   },
   "devDependencies": {
