@@ -54,7 +54,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-jwt": "^6.1.0",
-    "express-validation": "^1.0.2",
+    "express-validation": "^3.0.8",
     "express-winston": "^2.5.0",
     "helmet": "^3.23.3",
     "http-status": "^1.5.0",
