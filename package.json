@@ -55,7 +55,7 @@
     "express": "^4.16.2",
     "express-jwt": "^6.1.0",
     "express-validation": "^1.0.2",
-    "express-winston": "^2.5.0",
+    "express-winston": "^4.2.0",
     "helmet": "^3.23.3",
     "http-status": "^1.5.0",
     "joi": "^14.3.1",
