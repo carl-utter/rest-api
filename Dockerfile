@@ -1,5 +1,5 @@
 # take default image of node 8.x
-FROM node:8.7.0
+FROM node:23.10.0
 
 MAINTAINER Carl Utter <carl.j.utter@gmail.com>
 
