@@ -52,7 +52,7 @@
     "cors": "^2.8.4",
     "debug": "^4.4.0",
     "dotenv": "^10.0.0",
-    "express": "^4.21.2",
+    "express": "^5.0.1",
     "express-jwt": "^8.5.1",
     "express-validation": "^3.0.8",
     "express-winston": "^2.5.0",
