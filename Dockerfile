@@ -1,5 +1,5 @@
 # take default image of node 8.x
-FROM node:23.10.0-bookworm-slim
+FROM node:23.11.1-bookworm-slim
 
 MAINTAINER Carl Utter <carl.j.utter@gmail.com>
 
